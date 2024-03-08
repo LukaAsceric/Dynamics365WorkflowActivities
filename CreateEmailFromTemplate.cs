@@ -80,9 +80,8 @@ namespace Dynamics365WorkflowActivities
                 //Create the tracing service
                 ITracingService tracingService = context.GetExtension<ITracingService>();
 
-                // Your custom logic here
-                var emailTemplate = EmailTemplate.Get<EntityReference>(context);
-                
+                EntityReference emailTemplate = EmailTemplate.Get<EntityReference>(context);
+
                 EntityReference[] regardinRecords = {
                     RegardingRecordIncident.Get<EntityReference>(context),
                     RegardingRecordQuote.Get<EntityReference>(context),
